@@ -1,4 +1,5 @@
 import speech_recognition as sr
+import pyautogui
 
 r = sr.Recognizer()
 m = sr.Microphone()
@@ -15,4 +16,5 @@ with m:
     for i in keywords:
         if i in text:
             print("triggered")
+            pyautogui.press('volumemute')
     
